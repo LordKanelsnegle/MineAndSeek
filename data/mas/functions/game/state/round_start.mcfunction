@@ -7,7 +7,7 @@
 #  Called by:
 #    game/logic/spawn_hunters
 #  Additional notes:
-#    None
+#    The tick_second function MUST be the first scheduled so that it takes priority.
 
 #UPDATE GAME STATE
 scoreboard players operation #game_state mas.counters = #IN_GAME mas.enums

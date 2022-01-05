@@ -13,4 +13,4 @@
 xp add @a[tag=mas.player] -1 levels
 
 #LOOP EVERY MINUTE
-execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/logic/xp_timer 60s
+schedule function mas:game/logic/xp_timer 60s

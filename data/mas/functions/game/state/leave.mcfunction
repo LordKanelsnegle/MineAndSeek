@@ -17,7 +17,7 @@
 tp @s 1.5 63 35.5 180 0
 
 #STOP SOUND
-stopsound @s *
+stopsound @s
 
 #RESET SELF
 team leave @s

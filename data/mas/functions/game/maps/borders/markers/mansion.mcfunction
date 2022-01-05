@@ -9,10 +9,11 @@
 #  Additional notes:
 #    It may be possible to merge the marker checks using predicate alternatives, though I'm not sure of
 #    the performance impact. TODO (medium): Explore this.
-#    @s represents the marker, @p represents the player.
+#    @s represents the marker, @p represents the player, so we can't do predicate checks - they have to be
+#    entity checks that use a predicate.
 
 #PLAYER IN RANGE
-execute if predicate mas:maps/in_mansion_range run tp @s @p
+execute if entity @p[predicate=mas:maps/in_mansion_range] run tp @s @p
 
 #PLAYER NOT IN RANGE
-execute unless predicate mas:maps/in_mansion_range run tp @p @s
+execute unless entity @p[predicate=mas:maps/in_mansion_range] run tp @p @s

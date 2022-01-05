@@ -19,7 +19,7 @@ tag @s remove mas.spy
 tag @s remove mas.tamer
 tag @s remove mas.spectator
 
-#KILLER TAGS
+#HUNTER TAGS
 tag @s remove mas.samurai
 tag @s remove mas.savage
 tag @s remove mas.sniper
