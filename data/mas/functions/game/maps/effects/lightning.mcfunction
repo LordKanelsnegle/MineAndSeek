@@ -26,4 +26,4 @@ execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/ef
 execute if score #map mas.ids = #FARM mas.enums run function mas:game/maps/effects/lightning/farm
 
 #LOOP EVERY 30 SECONDS
-execute if score #game_state mas.counters = #IN_GAME mas.enums run schedule function mas:game/maps/effects/lightning 30s
+schedule function mas:game/maps/effects/lightning 30s

@@ -14,7 +14,7 @@ tp @a[team=mas.survivor] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,li
 #DISPLAY TEXT
 title @a title ["",{"text":"SURVIVORS ESCAPED","bold":true,"italic":false,"color":"dark_blue"}]
 title @a[team=mas.survivor] subtitle ["",{"text":"Run for your lives!","bold":true,"italic":false,"color":"blue"}]
-title @a[team=mas.hunter] subtitle ["",{"text":"Hunt them down!","bold":true,"italic":false,"color":"blue"}]
+title @a[team=mas.hunter] subtitle ["",{"text":"Prepare for the hunt!","bold":true,"italic":false,"color":"blue"}]
 
 #SCHEDULE HUNTER SPAWN
 schedule function mas:game/logic/spawn_hunters 15s

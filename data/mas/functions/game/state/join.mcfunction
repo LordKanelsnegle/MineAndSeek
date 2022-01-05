@@ -10,6 +10,8 @@
 #    Could potentially allow players to join alive during the locker phase.
 #    The entity check for setting the ids of the markers is also used twice, so it could be turned into
 #    its own function to optimize it. TODO (low): Return to this.
+#    Also, the reason we have the execute when setting ID is to deal with the unlikely situation that multiple
+#    players attempt to join in the same tick (not so unlikely if using execute as @a to join)
 
 #ADD PLAYER TAG
 tag @s add mas.player
@@ -18,13 +20,13 @@ tag @s add mas.player
 scoreboard players reset @s mas.joined
 
 #JOINED PRE_GAME
-#might later change this to allow joining during locker phase.
 execute if score #game_state mas.counters = #PRE_GAME mas.enums run kill @s
 
 #JOINED DURING GAME
 execute if score #game_state mas.counters = #IN_GAME mas.enums run kill @s
 
 #SET ID
+execute as @a if score @s mas.ids = #players mas.counters run scoreboard players add #players mas.counters 1
 scoreboard players operation @s mas.ids = #players mas.counters
 
 #SPAWN PLAYER MARKERS
