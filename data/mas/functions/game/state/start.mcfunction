@@ -37,3 +37,6 @@ title @a[team=mas.hunter] subtitle ["",{"text":"You have 45s to pick a class","b
 
 #SCHEDULE SURVIVOR SPAWN
 schedule function mas:game/logic/spawn_survivors 30s
+
+#LOOP PRE_GAME MUSIC
+execute if score #game_state mas.counters = #PRE_GAME mas.enums run schedule function mas:game/maps/music/pregame_music 115s

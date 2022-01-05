@@ -8,6 +8,13 @@
 #  Additional notes: 
 #    None
 
+#BLOODFX WHEN A SURVIVOR IS KILLED
+particle block red_mushroom_block ~ ~1 ~ 0 0 0 1 200 normal
+
+#SOUND WHEN A SURVIVOR IS KILLED
+playsound entity.ravager.celebrate player @a[tag=mas.player] ~ ~1 ~ 1 1.2 1
+playsound block.bell.resonate master @p[team=mas.hunters,predicate=mas:is_killer] ~ ~ ~ 0.2 0.5
+
 #ADD SPECTATOR TAG
 tag @s add mas.spectator
 
