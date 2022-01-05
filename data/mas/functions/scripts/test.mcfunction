@@ -1,0 +1,4 @@
+execute if score #game_state mas.counters = #IN_GAME mas.enums at @a run summon firework_rocket ~ ~ ~ {FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:1b,Trail:1b,Colors:[I;1376106],FadeColors:[I;3145487]}]}}}}
+execute if score #game_state mas.counters = #PRE_GAME mas.enums run tellraw @a {"text":"Hey! You're not in a game at the moment, just saying","color":"dark_red"}
+execute if score #game_state mas.counters = #POST_GAME mas.enums run tellraw @a {"text":"Hey! You're not in a game at the moment, just saying","color":"dark_red"}
+tp @a[team=mas.hunter] ~ ~5 ~
