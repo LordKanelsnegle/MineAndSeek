@@ -1,0 +1,53 @@
+[
+  {
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "#map"
+      },
+      "score": "mas.ids"
+    },
+    "range": {
+      "min": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#MANSION"
+        },
+        "score": "mas.enums"
+      },
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#MANSION"
+        },
+        "score": "mas.enums"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "location": {
+        "position": {
+          "x": {
+            "min": -13,
+            "max": 59
+          },
+          "y": {
+            "min": 31,
+            "max": 56
+          },
+          "z": {
+            "min": 57,
+            "max": 125
+          }
+        }
+      }
+    }
+  }
+]

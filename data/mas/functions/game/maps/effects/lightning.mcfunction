@@ -15,11 +15,10 @@
 #    the map id for the spreadplayers part. TODO (medium): Explore this.
 
 #SPAWN MARKER IF NOT SPAWNED
-#could summon in map setup to avoid calling this repeatedly, but i want effects to be self-contained
-execute unless entity @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1] at @e[type=minecraft:armor_stand,tag=mas.hunter_spawn,limit=1] run summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["mas.lightning","mas.entity"]}
+execute unless entity @e[type=minecraft:marker,tag=mas.lightning,limit=1] at @e[type=minecraft:marker,tag=mas.hunter_spawn,limit=1] run summon minecraft:marker ~ ~ ~ {Tags:["mas.lightning","mas.entity"]}
 
 #SUMMON LIGHTNING
-execute at @e[type=minecraft:armor_stand,tag=mas.lightning,limit=1] run summon lightning_bolt ~ ~ ~ {Tags:["mas.entity"]}
+execute at @e[type=minecraft:marker,tag=mas.lightning,limit=1] run summon lightning_bolt ~ ~ ~ {Tags:["mas.entity"]}
 
 #RANDOMIZE LOCATION
 execute if score #map mas.ids = #MANSION mas.enums run function mas:game/maps/effects/lightning/mansion

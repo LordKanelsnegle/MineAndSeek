@@ -30,8 +30,8 @@ scoreboard players reset @s mas.ids
 scoreboard players reset @s mas.counters
 
 #KILL MARKERS
-execute at @s as @e[type=minecraft:armor_stand,tag=mas.idle_marker] if score @s mas.ids = @p mas.ids run kill @s
-execute at @s as @e[type=minecraft:armor_stand,tag=mas.border_marker] if score @s mas.ids = @p mas.ids run kill @s
+execute at @s as @e[type=minecraft:marker,tag=mas.idle_marker] if score @s mas.ids = @p mas.ids run kill @s
+execute at @s as @e[type=minecraft:marker,tag=mas.border_marker] if score @s mas.ids = @p mas.ids run kill @s
 
 #SEND MESSAGE
 tellraw @s ["",{"text":"[","bold":true,"color":"gray"},{"text":"MineAndSeek","bold":true,"color":"blue"},{"text":"]","bold":true,"color":"gray"},{"text":" You have been removed from the game."}]

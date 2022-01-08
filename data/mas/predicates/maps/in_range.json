@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "mas:maps/mansion/in_range"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "mas:maps/farm/in_range"
+    }
+  ]
+}

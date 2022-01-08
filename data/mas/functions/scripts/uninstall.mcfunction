@@ -10,7 +10,7 @@
 #    None
 
 #EXECUTE CLEANUP
-function mas:game/state/end
+function #mas:forced_end
 
 #REMOVE TEAMS
 team remove mas.survivor

@@ -2,7 +2,7 @@
 #  Purpose:
 #    Executes round-specific functionality that can be run per second instead of per tick.
 #  End Effect:
-#    Checks for deaths, idling, team player counts (for win conditions), and forces gamemodes.
+#    Checks for deaths, idling, borders, team player counts (for win conditions), and forces gamemodes.
 #  Called by:
 #    game/state/round_start
 #  Additional notes:
@@ -15,11 +15,18 @@
 #DEATH CHECK
 execute as @a[scores={mas.death=1..}] run function mas:game/logic/death
 
-#IDLE CHECK
-execute at @a[team=mas.survivor,tag=!mas.spectator] as @e[type=minecraft:armor_stand,tag=mas.idle_marker,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/idle_check
+#MARKER CHECK
+execute at @a[tag=mas.player,tag=!mas.spectator] as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] if score @p mas.ids = @s mas.ids run function mas:game/logic/marker_check
+
+#BORDER EFFECTS
+tp @a[tag=!mas.player,predicate=mas:maps/in_range] 1.5 63 35.5 180 0
+kill @e[type=!minecraft:player,tag=!mas.entity,predicate=mas:maps/in_range]
+kill @e[type=!minecraft:player,tag=mas.entity,predicate=!mas:maps/in_range]
+
+#IDLING EFFECTS
 title @a[team=mas.survivor,scores={mas.counters=25}] title ["",{"text":"Warning","bold":false,"italic":false,"color":"white"}]
 title @a[team=mas.survivor,scores={mas.counters=25}] subtitle ["",{"text":"You will be revealed soon unless you move!","bold":false,"italic":false,"color":"white"}]
-effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 1 0 true
+effect give @a[team=mas.survivor,scores={mas.counters=30..}] minecraft:glowing 2 0 true
 title @a[team=mas.survivor,scores={mas.counters=30..}] actionbar ["",{"text":"YOU ARE VISIBLE - Move to stay hidden!","bold":false,"italic":false,"color":"white"}]
 
 #SURVIVOR COUNT

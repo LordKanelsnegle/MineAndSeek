@@ -1,0 +1,6 @@
+{
+  "values":[
+	"mas:game/logic/cleanup",
+	"mas:game/state/end"
+  ]
+}

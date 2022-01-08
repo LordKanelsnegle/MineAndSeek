@@ -9,7 +9,7 @@
 #    None
 
 #TP TO SURVIVOR SPAWN
-tp @a[team=mas.survivor] @e[type=minecraft:armor_stand,tag=mas.survivor_spawn,limit=1]
+tp @a[team=mas.survivor] @e[type=minecraft:marker,tag=mas.survivor_spawn,limit=1]
 
 #DISPLAY TEXT
 title @a title ["",{"text":"SURVIVORS ESCAPED","bold":true,"italic":false,"color":"dark_blue"}]
