@@ -1,5 +1,5 @@
 
-# Welcome to MineAndSeek!
+# Welcome to MineAndSeek! test
 
 MineAndSeek is a minigame datapack designed by EternalLawn and implemented by LordKanelsnegle. It is intended for personal use, but we anticipate its growth and welcome the opportunity for matchmaking, player statistics, and the ability to play at any time.
 
