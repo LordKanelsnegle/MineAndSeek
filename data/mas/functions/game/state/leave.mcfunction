@@ -12,7 +12,7 @@
 #    May be more efficient to combine the marker entity check and simply use mas.entity. TODO (medium): Return to this.
 
 #TP BACK TO LOBBY (UNLESS ALREADY IN LOBBY)
-execute unless entity @s[predicate=mas:locations/lobby_and_voting] run tp @s -399.5 35 803.5 0 0
+execute unless entity @s[predicate=mas:locations/lobby_and_voting] run tp @s -399.5 36 803.5 0 0
 
 #STOP SOUND
 stopsound @s
