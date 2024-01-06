@@ -1,10 +1,10 @@
-# EQUIP EFFECTS
+# EQUIP
 #  Purpose:
-#    Handles the equip effects.
+#    Handles the kit equipping for the player.
 #  End Effect:
 #    Runs all of the equips for each kit.
 #  Called by:
-#    advancements/inventory_changed
+#    advancements/inv_changed
 #  Additional notes:
 #    Advancement MUST be revoked at the very end or else the equip functions will trigger it (causing a feedback loop)
 

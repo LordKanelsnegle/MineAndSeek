@@ -1,4 +1,4 @@
-# REGISTER MAPS
+# INSTALL
 #  Purpose:
 #    Isolates map id setup from the install function to keep map related things in one folder.
 #  End Effect:

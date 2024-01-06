@@ -65,12 +65,12 @@ scoreboard objectives add mas.ulted dummy
 scoreboard objectives add mas.ult_dur dummy
 #mas.immune_dur - used for tracking remaining debuff immunity duration
 scoreboard objectives add mas.immune_dur dummy
-#mas.lock_dur - used for tracking remaining ability lock duration
-scoreboard objectives add mas.lock_dur dummy
 #mas.kit_ids - used for tracking kits
 scoreboard objectives add mas.kit_ids dummy
-#mas.spell_ids - used for tracking spells
-scoreboard objectives add mas.spell_ids dummy
+#mas.caster_ids - used for tracking spell caster
+scoreboard objectives add mas.caster_ids dummy
+#mas.castee_ids - used for tracking spell castee
+scoreboard objectives add mas.castee_ids dummy
 #  settings
 scoreboard players set #MIN_PLAYERS mas.constants 2
 scoreboard players set #MAX_PLAYERS mas.constants 20
@@ -82,12 +82,12 @@ scoreboard players set #PRE_GAME mas.constants 2
 scoreboard players set #IN_GAME mas.constants 3
 scoreboard players set #POST_GAME mas.constants 4
 #  maps
-function mas:game/maps/register_maps
+function mas:game/maps/install
 # math constants
 scoreboard players set #TICKS_PER_SECOND mas.constants 20
 #  kits
-function mas:game/kits/register_kits
-function mas:game/abilities/register_abilities
+function mas:game/kits/install
+function mas:game/abilities/install
 
 #SET GAME STATE
 scoreboard players operation #game_state mas.counters = #NO_GAME mas.constants

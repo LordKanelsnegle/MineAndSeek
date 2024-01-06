@@ -1,8 +1,8 @@
 # INSTALL
 #  Purpose:
-#    Handles all of the one-time setup needed for kits to function.
+#    Isolates kit id setup from the install function to keep kit related things in one folder.
 #  End Effect:
-#    Sets the ids for every kit.
+#    Sets the ids for all of the kits during installation.
 #  Called by:
 #    scripts/install
 #  Additional notes:

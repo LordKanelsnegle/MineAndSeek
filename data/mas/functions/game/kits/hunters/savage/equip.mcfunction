@@ -4,7 +4,7 @@
 #  End Effect:
 #    Player has their inventory forced to the desired state.
 #  Called by:
-#    game/kits/hunters/savage/assign, game/kits/equip_effects
+#    game/kits/hunters/savage/assign, game/kits/equip
 #  Additional notes:
 #    None
 

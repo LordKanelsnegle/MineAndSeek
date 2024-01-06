@@ -35,9 +35,9 @@ scoreboard objectives remove mas.active_dur
 scoreboard objectives remove mas.ulted
 scoreboard objectives remove mas.ult_dur
 scoreboard objectives remove mas.immune_dur
-scoreboard objectives remove mas.lock_dur
 scoreboard objectives remove mas.kit_ids
-scoreboard objectives remove mas.spell_ids
+scoreboard objectives remove mas.caster_ids
+scoreboard objectives remove mas.castee_ids
 
 #CLEAR SCHEDULES
 schedule clear mas:game/logic/dc_check

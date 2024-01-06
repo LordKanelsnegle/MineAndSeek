@@ -30,6 +30,6 @@
         }
     },
     "rewards": {
-        "function": "mas:game/kits/equip_effects"
+        "function": "mas:game/kits/equip"
     }
 }

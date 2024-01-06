@@ -20,7 +20,7 @@ scoreboard players reset @a[tag=mas.player] mas.death
 #MAP SETUP
 scoreboard players reset #max_votes mas.counters
 scoreboard players operation #max_votes mas.counters > @e[type=marker,tag=mas.vote] mas.counters
-execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run function mas:game/maps/map_select
+execute as @e[type=marker,tag=mas.vote,sort=random] if score @s mas.counters = #max_votes mas.counters run function mas:game/maps/select
 function mas:game/maps/setup
 
 #PROTECT MAP ENTITIES FROM DELETION

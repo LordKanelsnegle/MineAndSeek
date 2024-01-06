@@ -23,20 +23,30 @@ execute as @a[team=mas.survivor,tag=!mas.spectator,scores={mas.counters=400..}] 
 #DEATH CHECK
 execute as @a[team=!mas.hunter,scores={mas.death=1..}] at @s run function mas:game/logic/death
 
-#KIT EFFECTS
-execute as @a[tag=mas.player,tag=!mas.spectator] run function mas:game/kits/passive_effects
-execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:1}] run function mas:game/kits/active_effects
-execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:2}] run function mas:game/kits/ultimate_effects
+#KIT CHECKS
+execute as @a[tag=mas.player,tag=!mas.spectator] run function mas:game/kits/use_passive
+execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:1}] run function mas:game/kits/use_active
+execute as @a[tag=mas.player,tag=!mas.spectator,scores={mas.right_clicked=1},nbt={SelectedItemSlot:2}] run function mas:game/kits/use_ultimate
 scoreboard players set @a[tag=mas.player] mas.right_clicked 0
+
+#KIT EFFECTS
 effect give @a[tag=mas.player,tag=!mas.spectator,nbt=!{SelectedItemSlot:0}] weakness 1 0 true
 effect clear @a[tag=mas.player,tag=!mas.spectator,nbt={SelectedItemSlot:0}] weakness
 
 #ABILITY EFFECTS
+kill @e[type=minecraft:marker,tag=mas.effect,scores={mas.counters=..0}]
+scoreboard players remove @e[type=minecraft:marker,tag=mas.effect] mas.counters 1
+execute as @e[type=minecraft:marker,tag=mas.effect] run function mas:game/effects/check_effect
 
-
-#UPDATE COOLDOWNS
+#UPDATE ABILITY COOLDOWNS
 scoreboard players remove @a[tag=mas.player,scores={mas.active_cd=1..}] mas.active_cd 1
 scoreboard players remove @a[tag=mas.player,scores={mas.passive_cd=1..}] mas.passive_cd 1
+
+#UPDATE ABILITY DURATIONS
+scoreboard players remove @a[tag=mas.player,scores={mas.active_dur=1..}] mas.active_dur 1
+scoreboard players remove @a[tag=mas.player,scores={mas.passive_dur=1..}] mas.passive_dur 1
+scoreboard players remove @a[tag=mas.player,scores={mas.ult_dur=1..}] mas.ult_dur 1
+scoreboard players remove @a[tag=mas.player,scores={mas.immune_dur=1..}] mas.immune_dur 1
 
 #SURVIVOR COUNT
 scoreboard players set #survivors mas.counters 0
