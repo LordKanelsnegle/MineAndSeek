@@ -8,5 +8,5 @@
 #  Additional notes:
 #    Assumes execution as target, at target. 
 
-damage @s 0.2 minecraft:player_attack
+damage @s 0.4 minecraft:player_attack
 setblock ~ ~ ~ minecraft:redstone_wire replace

@@ -11,7 +11,7 @@
 #    Lastly, we need to check immunity here since it's proactive (ie prevents application of effect instead of cleansing it).
 
 #CHECK SAVAGE ONHIT EFFECT
-execute if score @s[scores={mas.active_dur=1..}] mas.kit_ids = #SAVAGE mas.kit_ids at @p[team=mas.survivor,scores={mas.immune_dur=0},nbt={HurtTime:10s}] run function mas:game/effects/spawn_effect {tag:"mas.bleed",dur:50,freq:10}
+execute if score @s[scores={mas.active_dur=1..}] mas.kit_ids = #SAVAGE mas.kit_ids at @p[team=mas.survivor,scores={mas.immune_dur=0},nbt={HurtTime:10s}] run function mas:game/effects/spawn_effect {tag:"mas.bleed",dur:100,freq:20}
 
 #REVOKE ADVANCEMENT
 advancement revoke @s only mas:hunter_hurt_survivor
