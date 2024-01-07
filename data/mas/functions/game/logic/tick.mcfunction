@@ -10,6 +10,7 @@
 #    We check for !mas.hunter instead of mas.survivor so that people who join mid-game are 
 #    turned into spectators. We also force gamemodes tickwise.
 #    Ability effects MUST be after kit effects, to avoid accidentally clearing ability weakness.
+#    TODO: The @a selectors can probably be grouped to avoid iterating through all players for every command.
 
 #MARKER CHECK
 execute as @e[type=minecraft:marker,tag=mas.entity,scores={mas.ids=0..}] run function mas:game/logic/marker_check
@@ -37,6 +38,10 @@ effect clear @a[tag=mas.player,tag=!mas.spectator,nbt={SelectedItemSlot:0}] weak
 kill @e[type=minecraft:marker,tag=mas.effect,scores={mas.counters=..0}]
 scoreboard players remove @e[type=minecraft:marker,tag=mas.effect] mas.counters 1
 execute as @e[type=minecraft:marker,tag=mas.effect] run function mas:game/effects/check_effect
+
+#ABILITY EFFECT CLEANUP
+execute as @e[type=minecraft:area_effect_cloud,tag=mas.pin] at @s at @p run function mas:game/util/update_pins
+kill @e[type=minecraft:armor_stand,tag=mas.surface_finder,nbt={OnGround:1b}]
 
 #UPDATE ABILITY COOLDOWNS
 scoreboard players remove @a[tag=mas.player,scores={mas.active_cd=1..}] mas.active_cd 1

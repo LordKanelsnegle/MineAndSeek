@@ -275,7 +275,7 @@ All of the folders of interest are in `data/mas`, so assume all folders discusse
 This folder contains chunks of code known as "functions", which can be run individually. Some of these are called every tick while others are called at specific times.
 
 ### Game
-Contains the functions that interact directly with the game itself, such as the state logic, map logic, and tickwise effects.
+Contains the functions that interact directly with the game itself, such as the state logic, map logic, and tickwise effects. The `util` folder is used for mini-scripts that are just designed to avoid using the same selector multiple times, as a minor optimization.
 
 ### Players
 Contains the player-facing functions, which apply some basic checks before running the underlying `game/state` functions. This includes joining/leaving the game and moderator commands in case something goes wrong.

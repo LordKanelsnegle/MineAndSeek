@@ -12,14 +12,19 @@
 #    its own function to optimize it. TODO (low): Return to this.
 #    Also, the reason we have the execute conditions for the bounds marker is because we don't want the
 #    bounds marker to be deleted by the bound effects, but we don't really care about the idle marker (since
-#    joining mid-game will set you to spectator anyway). Lastly, we need to reset immunity here because we
-#    need to be able to check it within a selector for all players (so it needs a default value).
+#    joining mid-game will set you to spectator anyway). 
+#    Lastly, we need to set durations/cds here because they need to have an initial value for checks elsewhere.
 
 #ADD PLAYER TAG
 tag @s add mas.player
 
-#RESET DC CHECK AND IMMUNITY
+#RESET DC CHECK
 scoreboard players reset @s mas.joined
+
+#RESET COOLDOWNS/DURATIONS
+scoreboard players set @s mas.passive_cd 0
+scoreboard players set @s mas.active_cd 0
+scoreboard players set @s mas.ulted 0
 scoreboard players set @s mas.immune_dur 0
 
 #SET ID
