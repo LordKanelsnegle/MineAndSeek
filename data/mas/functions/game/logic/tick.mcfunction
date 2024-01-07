@@ -40,7 +40,7 @@ scoreboard players remove @e[type=minecraft:marker,tag=mas.effect] mas.counters 
 execute as @e[type=minecraft:marker,tag=mas.effect] run function mas:game/effects/check_effect
 
 #ABILITY EFFECT CLEANUP
-execute as @e[type=minecraft:area_effect_cloud,tag=mas.pin] at @s at @p run function mas:game/util/update_pins
+execute as @e[type=minecraft:area_effect_cloud,tag=mas.pin] at @s at @p run function mas:game/util/update_pin
 kill @e[type=minecraft:armor_stand,tag=mas.surface_finder,nbt={OnGround:1b}]
 
 #UPDATE ABILITY COOLDOWNS
