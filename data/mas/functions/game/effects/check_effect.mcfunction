@@ -1,4 +1,12 @@
-#TODO: VERIFY, ADD COMMENTS
+# EFFECTS: CHECK EFFECT
+#  Purpose:
+#    Checks if an over-time effect should be retriggered yet or not.
+#  End Effect:
+#    Runs the effect script corresponding to this effect if the effect's timer is a multiple of the effect's frequency.
+#  Called by:
+#    game/logic/tick
+#  Additional notes:
+#    @s represents the Caster, @p represents the Castee.
 
 #CHECK IF EFFECT SHOULD TRIGGER
 scoreboard players operation #temp mas.counters = @s mas.counters

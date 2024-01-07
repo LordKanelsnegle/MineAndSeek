@@ -1,4 +1,4 @@
-# EFFECT: SPAWN EFFECT
+# EFFECTS: SPAWN EFFECT
 #  Purpose:
 #    Handles the spawning of all effects.
 #  End Effect:
