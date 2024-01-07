@@ -2,7 +2,7 @@
 #  Purpose:
 #    Handles the active trigger for the Savage.
 #  End Effect:
-#    x
+#    Sets the active duration and cooldown. Also gives the player speed and immunity.
 #  Called by:
 #    game/logic/tick
 #  Additional notes:

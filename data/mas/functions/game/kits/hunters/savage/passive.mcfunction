@@ -15,7 +15,7 @@
 # execute at @a[team=mas.survivor,distance=6..] run playsound entity.warden.heartbeat player @s ~ ~ ~ 0.1 0.8
 
 #SPEED BOOST
-# execute if entity @a[team=mas.survivor,distance=..5] run effect give @s speed 1 1 true
+# execute if entity @a[team=mas.survivor,distance=..5] run effect give @s speed 1 0 true
 
 #SET PASSIVE DURATION
 scoreboard players set @s mas.passive_dur 1
