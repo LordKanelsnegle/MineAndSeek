@@ -1,1 +1,1 @@
-stopsound @s master minecraft:music_disc.11
+stopsound @a[team=mas.survivor] master minecraft:music_disc.11

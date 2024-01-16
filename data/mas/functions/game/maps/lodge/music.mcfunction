@@ -10,7 +10,7 @@
 
 #PLAY MUSIC
 stopsound @a[tag=mas.player]
-playsound minecraft:music_disc.pigstep master @a[tag=mas.player] -1455.0 1000 -34.0 100 0.6 1
+playsound minecraft:music_disc.pigstep music @a[tag=mas.player] -1455.0 1000 -34.0 100 0.6 1
 
 #LOOP EVERY 230 SECONDS
 schedule function mas:game/maps/music 230s

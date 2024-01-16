@@ -13,7 +13,8 @@ scoreboard players set @s mas.ult_dur 8
 scoreboard players operation @s mas.ult_dur *= #TICKS_PER_SECOND mas.constants
 
 #IMMEDIATE ABILITY EFFECTS
-execute as @a[team=mas.survivors] at @s run function mas:game/effects/paranoia
+execute as @a[team=mas.survivor] at @s run function mas:game/effects/paranoia
+schedule function mas:game/util/clear_paranoia 8s replace
 
 #SET ULTED TO TRUE
 scoreboard players set @s mas.ulted 1

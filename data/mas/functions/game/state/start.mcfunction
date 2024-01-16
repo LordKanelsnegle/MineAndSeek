@@ -43,7 +43,7 @@ title @a[team=mas.hunter] subtitle ["",{"text":"You have 45s to pick a class","b
 
 #PLAY LOCKER MUSIC
 stopsound @a[tag=mas.player]
-playsound music_disc.stal master @a[tag=mas.player] -465.5 1000 802.5 100 0.8
+playsound music_disc.stal music @a[tag=mas.player] -465.5 1000 802.5 100 0.8
 
 #LOCKER TIMER INIT
 xp set @a[team=mas.survivor] 30 levels

@@ -10,7 +10,7 @@
 
 #PLAY MUSIC
 stopsound @a[tag=mas.player]
-playsound minecraft:music_disc.13 master @a[tag=mas.player] -1455.0 1000 -34.0 100 0.8 1
+playsound minecraft:music_disc.13 music @a[tag=mas.player] -1455.0 1000 -34.0 100 0.8 1
 
 #LOOP EVERY 135 SECONDS
 schedule function mas:game/maps/music 135s
